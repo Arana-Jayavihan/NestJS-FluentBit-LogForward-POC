@@ -10,7 +10,7 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
-RUN npm install --production -g pino-syslog pino-socket
+RUN npm install -g pino-syslog pino-socket
 
 # Copy source code
 COPY . .
@@ -27,7 +27,7 @@ WORKDIR /app
 # Install only production dependencies
 COPY package*.json ./
 RUN npm install --omit=dev
-RUN npm install --production -g pino-syslog pino-socket
+RUN npm install -g pino-syslog pino-socket
 
 # Copy built files from the build stage
 COPY --from=build /app/dist ./dist
@@ -36,4 +36,5 @@ COPY --from=build /app/dist ./dist
 EXPOSE 3000
 
 # Start the NestJS application
+
 CMD ["node", "dist/main.js"]
