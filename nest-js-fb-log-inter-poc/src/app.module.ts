@@ -22,7 +22,7 @@ import { destination } from 'pino';
               target: 'pino-socket',
               options: {
                 mode: 'tcp',
-                address: '127.0.0.1',
+                address: '165.22.52.204',
                 port: 9000
               }
             }
