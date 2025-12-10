@@ -10,6 +10,7 @@ import { destination } from 'pino';
     LoggerModule.forRoot({
       pinoHttp: {
         transport: {
+          level: "info",
           pipeline: [
             {
               target: 'pino-syslog',

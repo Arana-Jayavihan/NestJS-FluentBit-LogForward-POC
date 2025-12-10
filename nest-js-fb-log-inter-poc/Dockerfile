@@ -10,6 +10,7 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm install
+RUN npm install --production -g pino-syslog
 
 # Copy source code
 COPY . .
@@ -26,6 +27,7 @@ WORKDIR /app
 # Install only production dependencies
 COPY package*.json ./
 RUN npm install --omit=dev
+RUN npm install --production -g pino-syslog
 
 # Copy built files from the build stage
 COPY --from=build /app/dist ./dist
