@@ -1,0 +1,42 @@
+nest-api:
+  image:
+    repository: nest-api
+    tag: latest
+    pullPolicy: IfNotPresent
+
+  service:
+    type: ClusterIP
+    port: 3000
+
+fluent-bit:
+  service:
+    type: ClusterIP
+    port: 9000
+
+  inputs: |
+    [INPUT]
+      Name        tcp
+      Listen      0.0.0.0
+      Port        9000
+      Chunk_Size  32
+      Buffer_Size 64
+      Format      json
+
+  filters: |
+    [FILTER]
+      Name modify
+      Match *
+      Rename time CreatedTime
+
+  outputs: |
+    [OUTPUT]
+      Name        stdout
+      Match       *
+
+    [OUTPUT]
+      Name        file
+      Match       *
+      Format      plain
+      Path        /var/log
+      file        out.log
+

@@ -1,0 +1,15 @@
+apiVersion: v2
+name: poc-stack-helm
+description: Umbrella chart for NestJS API + Fluent Bit
+type: application
+version: 0.1.0
+
+dependencies:
+  - name: nest-api
+    version: 0.1.0
+    repository: "file://charts/nest-api"
+
+  - name: fluent-bit
+    version: 0.37.0
+    repository: "https://fluent.github.io/helm-charts"
+

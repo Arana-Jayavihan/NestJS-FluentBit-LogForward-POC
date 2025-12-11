@@ -1,0 +1,122 @@
+[
+    {
+        "level": 30,
+        "CreatedTime": 1765382393924,
+        "pid": 1792215,
+        "hostname": "nixos",
+        "context": "NestFactory",
+        "msg": "Starting Nest application..."
+    },
+    {
+        "level": 30,
+        "CreatedTime": 1765382393925,
+        "pid": 1792215,
+        "hostname": "nixos",
+        "context": "InstanceLoader",
+        "msg": "AppModule dependencies initialized"
+    },
+    {
+        "level": 30,
+        "CreatedTime": 1765382393925,
+        "pid": 1792215,
+        "hostname": "nixos",
+        "context": "InstanceLoader",
+        "msg": "LoggerModule dependencies initialized"
+    },
+    {
+        "level": 30,
+        "CreatedTime": 1765382393925,
+        "pid": 1792215,
+        "hostname": "nixos",
+        "context": "RoutesResolver",
+        "msg": "AppController {/}:"
+    },
+    {
+        "level": 30,
+        "CreatedTime": 1765382393925,
+        "pid": 1792215,
+        "hostname": "nixos",
+        "context": "RouterExplorer",
+        "msg": "Mapped {/, GET} route"
+    },
+    {
+        "level": 30,
+        "CreatedTime": 1765382393925,
+        "pid": 1792215,
+        "hostname": "nixos",
+        "context": "RouterExplorer",
+        "msg": "Mapped {/health, GET} route"
+    },
+    {
+        "level": 30,
+        "CreatedTime": 1765382393925,
+        "pid": 1792215,
+        "hostname": "nixos",
+        "context": "NestApplication",
+        "msg": "Nest application successfully started"
+    },
+    {
+        "level": 30,
+        "CreatedTime": 1765382404888,
+        "pid": 1792215,
+        "hostname": "nixos",
+        "req": {
+            "id": 1,
+            "method": "GET",
+            "url": "/health"
+        },
+        "res": {
+            "statusCode": 200
+        },
+        "responseTime": 11,
+        "msg": "request completed"
+    },
+    {
+        "level": 30,
+        "CreatedTime": 1765382406162,
+        "pid": 1792215,
+        "hostname": "nixos",
+        "req": {
+            "id": 2,
+            "method": "GET",
+            "url": "/health"
+        },
+        "res": {
+            "statusCode": 200
+        },
+        "responseTime": 2,
+        "msg": "request completed"
+    },
+    {
+        "level": 30,
+        "CreatedTime": 1765382406851,
+        "pid": 1792215,
+        "hostname": "nixos",
+        "req": {
+            "id": 3,
+            "method": "GET",
+            "url": "/health"
+        },
+        "res": {
+            "statusCode": 200
+        },
+        "responseTime": 1,
+        "msg": "request completed"
+    },
+    {
+        "level": 30,
+        "CreatedTime": 1765382407475,
+        "pid": 1792215,
+        "hostname": "nixos",
+        "req": {
+            "id": 4,
+            "method": "GET",
+            "url": "/health"
+        },
+        "res": {
+            "statusCode": 200
+        },
+        "responseTime": 1,
+        "msg": "request completed"
+    }
+]

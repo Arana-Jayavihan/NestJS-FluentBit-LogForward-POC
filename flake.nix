@@ -17,6 +17,9 @@
       buildInputs = with pkgs-unstable; [
         nodejs_24
         fluent-bit
+        minikube
+        kubernetes-helm
+        kubectl
       ];
     };
   };
