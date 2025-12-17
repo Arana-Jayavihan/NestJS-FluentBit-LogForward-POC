@@ -2,7 +2,8 @@
 /dist
 /node_modules
 /build
-fluent-bit.*
+fluent-bit.yaml
+fluent-bit.conf
 
 # Logs
 logs
