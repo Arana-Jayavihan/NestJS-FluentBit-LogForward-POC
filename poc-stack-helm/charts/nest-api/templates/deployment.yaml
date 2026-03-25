@@ -44,6 +44,14 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          env:
+            - name: FLUENTBIT_HOST
+              value: {{ .Values.fluentbit.host | quote }}
+            - name: FLUENTBIT_PORT
+              value: {{ .Values.fluentbit.port | quote }}
+            {{- with .Values.env }}
+            {{- toYaml . | nindent 12 }}
+            {{- end }}
           {{- with .Values.livenessProbe }}
           livenessProbe:
             {{- toYaml . | nindent 12 }}

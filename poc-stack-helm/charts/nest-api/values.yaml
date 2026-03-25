@@ -5,6 +5,14 @@
 # This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 replicaCount: 1
 
+# FluentBit connection settings (for cross-namespace communication)
+fluentbit:
+  host: "fluent-bit.monitoring.svc.cluster.local"
+  port: "9000"
+
+# Additional environment variables
+env: []
+
 # This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
 image:
   repository: nest-api

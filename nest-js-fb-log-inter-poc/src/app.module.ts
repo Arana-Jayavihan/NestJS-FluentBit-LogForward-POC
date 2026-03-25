@@ -4,14 +4,19 @@ import { LoggerModule } from 'nestjs-pino';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
+// FluentBit address - defaults to localhost for local dev,
+// use FLUENTBIT_HOST env var for Kubernetes (e.g., fluent-bit.monitoring.svc.cluster.local)
+const fluentbitHost = process.env.FLUENTBIT_HOST || '127.0.0.1';
+const fluentbitPort = parseInt(process.env.FLUENTBIT_PORT || '9000', 10);
+
 const transport = {
   targets: [
     {
       target: 'pino-socket',
       options: {
         mode: 'tcp',
-        address: '127.0.0.1',
-        port: 9000,
+        address: fluentbitHost,
+        port: fluentbitPort,
       },
     },
     {

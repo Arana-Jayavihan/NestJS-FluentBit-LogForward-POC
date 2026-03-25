@@ -20,6 +20,7 @@
         minikube
         kubernetes-helm
         kubectl
+        opentofu  # Terraform-compatible IaC tool
       ];
     };
   };
