@@ -105,6 +105,10 @@ resources:
 daemonSetVolumes: []
 daemonSetVolumeMounts: []
 
+# Container security context
+securityContext:
+  allowPrivilegeEscalation: false
+
 # Pod settings
 podAnnotations: {}
 podLabels: {}
